@@ -28,7 +28,6 @@ public class MyFragmentPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int i) {
         return list.get(i);
     }
-
     @Override
     public int getCount() {
         return list.size();
