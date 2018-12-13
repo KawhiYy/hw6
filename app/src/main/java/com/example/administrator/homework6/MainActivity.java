@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             mf.setArguments(bd);
             fragments.add(mf);
         }
+
         
         MyFragmentPagerAdapter mfpa = new MyFragmentPagerAdapter(getSupportFragmentManager()
         ,fragments,Title);
