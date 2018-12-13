@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tb"
+        app:tabMode="scrollable"
+        app:tabTextColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimaryDark"
+        app:tabGravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--对齐方式，可选fill和center-->
+    app:tabIndicatorColor="@color/colorAccent" <!--设置tab下划线的颜色-->
+    <!--scrollable是可以横行滚动,fixed是指固定个数-->
+    app:tabSelectedTextColor="@color/colorPrimaryDark" <!--选择tab的文本颜色-->
+    app:tabTextColor="@color/colorPrimary" <!--普通tab字体颜色-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+
+</LinearLayout>
