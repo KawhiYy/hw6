@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MyFragment extends Fragment {
     int imgid;
@@ -16,6 +17,7 @@ public class MyFragment extends Fragment {
     ImageView iv;
     TextView tv;
     Bundle arg;
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,7 +32,7 @@ public class MyFragment extends Fragment {
         iv = (ImageView) view.findViewById(R.id.iv);
         tv = (TextView) view.findViewById(R.id.tv);
         tv.setText(arg.getString("sg"));
-
+        int position = arg.getInt("position");
         int page = arg.getInt("fruit");
         iv.setImageResource(page);
         if(page == R.drawable.banana){
@@ -43,6 +45,7 @@ public class MyFragment extends Fragment {
         if(page == R.drawable.apple){
             view.setBackgroundResource(R.color.colorPrimaryDark);
         }
+        Toast.makeText(getContext(),"这是第"+position+"个fragment",Toast.LENGTH_SHORT).show();
 
         return view;
     }
